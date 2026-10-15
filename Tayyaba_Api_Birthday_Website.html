@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tayyaba Api 🎀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#ef8eb5;--pink:#f8c7dc;--deep:#6d3454;--cream:#fff8fb;--ink:#48283b;--lilac:#e9d8f5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'DM Sans',sans-serif;color:var(--ink)}
+body{background-color:#fff7fb;background-image:linear-gradient(90deg,transparent 0 23px,rgba(239,142,181,.20) 24px,transparent 25px),linear-gradient(0deg,transparent 0 23px,rgba(248,199,220,.17) 24px,transparent 25px);background-size:48px 48px;overflow-x:hidden}
+body:before{content:"♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡  ♡";position:fixed;inset:0;pointer-events:none;z-index:0;color:rgba(239,142,181,.25);font-size:25px;letter-spacing:15px;line-height:82px;word-break:break-all;background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.1))}
+#app{position:relative;z-index:1;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px 15px}
+.scene{display:none;width:min(100%,520px);min-height:620px;background:rgba(255,250,252,.91);border:1px solid rgba(239,142,181,.45);border-radius:34px;padding:30px 23px 26px;text-align:center;box-shadow:0 20px 65px rgba(129,66,98,.14);position:relative;overflow:hidden;animation:arrive .55s ease both}
+.scene.active{display:flex;flex-direction:column;align-items:center;justify-content:center}
+@keyframes arrive{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b65d88;font-weight:700;margin-bottom:14px}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600;line-height:1.1;margin:0 0 15px;color:#713d59}
+h1{font-size:clamp(39px,10vw,58px)}h2{font-size:clamp(30px,7vw,42px)}
+p{font-size:15px;line-height:1.8;margin:8px 0;color:#77566a}.script{font-family:'Playfair Display',serif;font-style:italic;color:#b14f82}
+.emoji{font-size:50px;margin:3px 0 18px;filter:drop-shadow(0 6px 8px #e9b5cc)}
+.tiny{font-size:12px;color:#a1748c;margin-top:10px}
+.btn{appearance:none;border:0;cursor:pointer;color:#fff;background:linear-gradient(135deg,#d96f9e,#b65d91 55%,#8c527e);font:700 14px 'DM Sans',sans-serif;padding:15px 21px;min-height:54px;border-radius:26px 18px 27px 17px;box-shadow:0 9px 0 #e7b2cb,0 14px 25px #dba4c2a1;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden;margin-top:20px;max-width:100%}
+.btn:before{content:"";position:absolute;top:-50%;left:-70%;width:40%;height:200%;background:#ffffff50;transform:rotate(25deg);transition:left .45s}
+.btn:hover:before{left:130%}.btn:hover{transform:translateY(-3px) rotate(-1deg);box-shadow:0 12px 0 #e7b2cb,0 18px 25px #dba4c2a1}.btn:active{transform:translateY(4px);box-shadow:0 4px 0 #e7b2cb}
+.tag{display:inline-block;border:1px dashed #e6a3c2;border-radius:999px;padding:8px 13px;color:#a14f7a;font-size:12px;margin:4px;background:#fff6fa}
+.float{position:absolute;font-size:22px;animation:float 4s ease-in-out infinite;opacity:.75}.f1{top:23px;left:22px}.f2{top:38px;right:25px;animation-delay:1s}.f3{bottom:26px;left:28px;animation-delay:1.6s}.f4{bottom:32px;right:24px;animation-delay:.7s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-10px) rotate(8deg)}}
+.memories{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;margin-top:16px}
+.memory{background:#fff1f7;border:1px solid #f2c4d9;border-radius:19px;padding:15px 12px;text-align:left;min-height:106px;box-shadow:0 6px 15px #e9c5d31c}
+.memory b{display:block;font-size:13px;color:#9b4c75;margin-bottom:6px}.memory span{font-size:12px;line-height:1.55;color:#87677b}
+.envelope{width:190px;height:130px;background:#f4a9c8;border-radius:12px;position:relative;margin:20px auto 15px;box-shadow:0 15px 28px #d8a1bc80;cursor:pointer}
+.envelope:before{content:"";position:absolute;inset:0;background:#f8d3e3;clip-path:polygon(0 0,100% 0,50% 58%);border-radius:12px 12px 0 0;transform-origin:top;transition:transform .6s;z-index:2}
+.envelope:after{content:"";position:absolute;inset:0;background:linear-gradient(140deg,#e88db3 50%,#f6b9d0 50%);clip-path:polygon(0 100%,0 0,50% 55%,100% 0,100% 100%);border-radius:0 0 12px 12px}
+.envelope.open:before{transform:rotateX(180deg)}
+.letter{display:none;background:#fffdfd;border:1px solid #f2c7d9;border-radius:18px;padding:19px 17px;margin-top:12px;text-align:left;box-shadow:0 8px 20px #d6a5bc30}
+.letter.show{display:block;animation:arrive .5s ease}.letter p{font-size:14px}
+.cake{height:195px;width:240px;position:relative;margin:4px auto 10px}
+.plate{position:absolute;bottom:12px;left:5px;width:230px;height:20px;border-radius:50%;background:#e9b8cf;box-shadow:0 6px 0 #d995b8}
+.tier{position:absolute;left:35px;bottom:30px;width:170px;height:75px;border-radius:13px 13px 20px 20px;background:linear-gradient(#ffe2ec 0 22%,#f4a6c7 23% 100%);box-shadow:inset 0 -8px #e58db3}
+.tier:before{content:"";position:absolute;top:9px;left:0;right:0;height:15px;background:#fff1f7;border-radius:50%;box-shadow:0 9px #f4b5cf}
+.topTier{position:absolute;left:60px;bottom:101px;width:120px;height:43px;border-radius:12px 12px 8px 8px;background:#ffeaf2;border-bottom:9px solid #efa3c4}
+.candle{position:absolute;bottom:142px;width:8px;height:34px;border-radius:4px;background:repeating-linear-gradient(45deg,#fff 0 5px,#d982a9 5px 9px);z-index:3}
+.c1{left:92px}.c2{left:116px;height:42px;bottom:145px}.c3{left:140px}
+.flame{position:absolute;top:-15px;left:-3px;width:14px;height:19px;background:radial-gradient(ellipse at 50% 65%,#fff6b0 0 23%,#ffad42 45%,#f56d67 75%);border-radius:70% 30% 60% 40%;transform:rotate(8deg);filter:drop-shadow(0 0 7px #ffb348);animation:flicker .45s infinite alternate}
+@keyframes flicker{to{transform:rotate(-9deg) scale(.88);filter:drop-shadow(0 0 3px #ffb348)}}
+.candle.off .flame{animation:blowout .55s forwards}
+@keyframes blowout{to{opacity:0;transform:translate(24px,-18px) scale(.1) rotate(65deg)}}
+.smoke{display:none;position:absolute;top:-23px;left:0;color:#b8a1b0;font-size:22px;animation:smoke 1.2s forwards}.candle.off .smoke{display:block}
+@keyframes smoke{to{opacity:0;transform:translate(9px,-30px) scale(1.6)}}
+.confetti{position:fixed;top:-20px;width:8px;height:12px;animation:fall 3.5s linear forwards;z-index:10;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.2}}
+@media(max-height:700px){.scene{min-height:560px;padding-top:23px;padding-bottom:20px}.cake{transform:scale(.85);margin-top:-5px;margin-bottom:-10px}}
+</style>
+</head>
+<body>
+<div id="app">
+<section class="scene active" id="s1">
+<span class="float f1">♡</span><span class="float f2">🎀</span><span class="float f3">🌷</span><span class="float f4">♡</span>
+<div class="kicker">a little birthday surprise</div><div class="emoji">💌</div>
+<h1>Happy Birthday,<br><span class="script">Tayyaba Api</span></h1>
+<p>A tiny little corner of the internet<br>for someone who made tuition feel special. 🌸</p>
+<div><span class="tag">sweet memories</span><span class="tag">lots of duas</span><span class="tag">always grateful</span></div>
+<button class="btn" onclick="go(2)">Apiii, there's a little surprise for you ♡ →</button>
+<p class="tiny">made with love, respect & a whole lot of memories</p>
+</section>
+<section class="scene" id="s2">
+<span class="float f1">🌸</span><span class="float f2">♡</span>
+<div class="kicker">make a little wish</div><h2>A birthday cake<br>just for you</h2>
+<div class="cake"><div class="plate"></div><div class="tier"></div><div class="topTier"></div>
+<div class="candle c1"><i class="flame"></i><i class="smoke">〰</i></div><div class="candle c2"><i class="flame"></i><i class="smoke">〰</i></div><div class="candle c3"><i class="flame"></i><i class="smoke">〰</i></div></div>
+<p>Close your eyes, make a wish, and blow the candles out. ✨</p>
+<button class="btn" id="blow" onclick="blow()">💨 Make a wish, Apiii! →</button><p class="tiny" id="hint">May every good thing find its way to you. ♡</p>
+</section>
+<section class="scene" id="s3">
+<div class="kicker">a little note for you</div><h2>Something from<br>my heart 💗</h2>
+<p>Some teachers teach lessons… and some leave memories that stay with us long after tuition ends.</p>
+<div class="envelope" id="env" onclick="openLetter()" aria-label="Open letter"></div>
+<p class="tiny">tap the envelope to open your letter</p>
+<div class="letter" id="letter"><p>Dear Tayyaba Api,</p><p>Thank you for making our tuition days memorable. It wasn't only about studying and completing work — it was also the little moments, the conversations, the laughter, and all those memories that made that time feel special. 🥹🌷</p></div>
+<button class="btn" onclick="go(4)">Api, remember these little things? ♡ →</button>
+</section>
+<section class="scene" id="s4">
+<div class="kicker">little memories, big place in my heart</div><h2>Our tuition-era<br>treasures 🌸</h2>
+<p>Some moments might seem small, but they're the ones that stay with us.</p>
+<div class="memories">
+<div class="memory"><b>📚 Study time</b><span>The lessons, the questions, and trying to get everything right.</span></div>
+<div class="memory"><b>😂 The little laughs</b><span>Those small funny moments that made an ordinary day brighter.</span></div>
+<div class="memory"><b>💬 Our conversations</b><span>The chats and little interactions that became part of the memories.</span></div>
+<div class="memory"><b>🌷 Your guidance</b><span>The patience, support, and things I learned from you beyond books.</span></div>
+</div>
+<p class="tiny">the details may fade a little, but the good memories stay ♡</p>
+<button class="btn" onclick="go(5)">One last message, Apiii 💌 →</button>
+</section>
+<section class="scene" id="s5">
+<span class="float f1">💗</span><span class="float f2">🌷</span><span class="float f3">✨</span>
+<div class="kicker">from your student, with respect</div><h2>For my lovely<br><span class="script">Tayyaba Api</span></h2>
+<p style="text-align:left">Happy Birthday, Tayyaba Apiii! 🥹💗 I hope your day is filled with happiness, peace, and all the little things that make you smile. I feel genuinely lucky that I got to learn from you and share so many memories during tuition. When I look back, I don't just remember the studies — I remember the atmosphere, the little moments, the laughs, and the time we spent together. Thank you for being a part of those memories and for all the things you taught me, both inside and outside the books. May Allah bless you with good health, endless happiness, success, and barakah in everything you do. May all your duas come true and may you always have reasons to smile. You deserve so much goodness, Api. Stay blessed and keep smiling always. Happy Birthday once again! 🌸🎂🫶</p>
+<button class="btn" onclick="go(6);confetti()">Open your final birthday wish 🎀 →</button>
+</section>
+<section class="scene" id="s6">
+<div class="kicker">the final little page</div><div class="emoji">🌷🎂🌷</div>
+<h1 style="font-size:clamp(36px,9vw,52px)">Happy Birthday<br><span class="script">Tayyaba Api!</span></h1>
+<p>May this new year of your life bring you countless blessings, beautiful memories, peace in your heart, and happiness that stays.</p>
+<p class="script" style="font-size:24px">Allah hamesha khush rakhe. Ameen. 🤍</p>
+<div style="font-size:29px;margin-top:10px">💗 🌸 🎀 🌸 💗</div>
+<p class="tiny">a little website for a teacher who became a lovely memory ♡</p>
+<button class="btn" onclick="go(1)">Replay the surprise ↺</button>
+</section>
+</div>
+<script>
+function go(n){document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));document.getElementById('s'+n).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+let done=false;
+function blow(){if(done)return;done=true;document.querySelectorAll('.candle').forEach((c,i)=>setTimeout(()=>c.classList.add('off'),i*160));document.getElementById('blow').textContent='✨ Wish sent with love!';document.getElementById('hint').textContent='May your wishes come true, Apiii! 💗';setTimeout(()=>go(3),1600)}
+function openLetter(){document.getElementById('env').classList.add('open');document.getElementById('letter').classList.add('show')}
+function confetti(){const colors=['#ef8eb5','#f8c7dc','#e9d8f5','#d98aab','#ffe4a8'];for(let i=0;i<75;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=colors[i%colors.length];c.style.animationDelay=Math.random()*1.2+'s';c.style.transform='rotate('+Math.random()*360+'deg)';document.body.appendChild(c);setTimeout(()=>c.remove(),5000)}}
+</script>
+</body></html>
